@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학점은행제 상담신청</title>
+    <link rel="stylesheet" href="./css/common/reset.css" type="text/css">
+    <link rel="stylesheet" href="./css/common/common.css" type="text/css">
+    <link rel="stylesheet" href="./css/layout/header.css" type="text/css">
+    <link rel="stylesheet" href="./css/layout/contents.css" type="text/css">
+    <link rel="stylesheet" href="./css/layout/aside.css" type="text/css">
+    <link rel="stylesheet" href="./css/layout/modal.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+    <script src="https://kit.fontawesome.com/6361a44bfa.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./js/common.js"></script>
+    
+</head>
+<body>
+    <!-- 헤더 -->
+    <header>
+        <!-- 로고 -->
+        <h1 class="logo">
+            <a href="index.html" title="홈" class="">학점도비</a>
+        </h1>
+
+        <!-- 내비게이션 메뉴 -->
+        <nav class="gnb-wrap">
+            <ul class="gnb">
+                <li><a href="#introduction" class="arctic_scroll">소개</a></li>
+                <li><a href="#reviews" class="arctic_scroll">후기</a></li>
+                <li><a href="#faq" class="arctic_scroll">자주 묻는 질문</a></li>
+            </ul>
+        </nav>
+
+        <!-- 문의신청 -->
+        <div class="h-right-section">
+            <div class="consultation">
+                <button type="button" class="consultation-btn btn01">문의 신청</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 히어로 섹션 -->
+        <section id="top" class="hero">
+            <h2 class="hero-tit">학점은행제 전문컨설팅</h2>
+            <article class="hero-subtit-wrap">
+                <h3 class="hero-subtit">실력으로 검증된 국내 최고 교육 컨설턴트</h3>
+                <button type="button" class="consultation-btn btn02 cta-button">
+                    <span class="btn-inner-txt">1:1 맞춤 학습설계</span>
+                    <img src="./images/icon/pointer.png" alt="포인터" class="pointer">
+                </button>
+            </article>
+            <article class="txt-wrap">
+                <div class="hero-txt txt01">
+                    <strong>전문성</strong>
+                    <span>탄탄한</span>
+                    <span>상담 및 설계</span>
+                </div>
+                <div class="hero-txt txt02">
+                    <strong>노하우</strong>
+                    <span>풍부한 자료</span>
+                    <span>제공</span>
+                </div>
+                <div class="hero-txt txt03">
+                    <strong>책임감</strong>
+                    <span>완벽한</span>
+                    <span>수료 책임</span>
+                </div>
+                <div class="hero-txt txt04">
+                    <span>실시간</span>
+                    <span>상담</span>
+                </div>
+                <div class="hero-txt txt05">
+                    <p>목적별 최적의 노하우를 갖춘 컨설턴트의 상담을 받고 최단기간 · 최저비용으로 과정을 이수해보세요</p>
+                </div>
+            </article>
+            <article class="next-btn-wrap">
+                <a href="#introduction" title="다음페이지로 이동" id="next_btn" class="arctic_scroll"><i class="fa-solid fa-arrow-down"></i></a>
+            </article>
+        </section>
+
+        <!-- 홈페이지 소개 -->
+        <section id="introduction">
+            <h2 class="introduction-tit">학점은행제 소개</h2>
+
+            <article class="introduction section">
+                <h3 class="introduction-subtit">학점은행제는 다양한 학습 경험을 통해 학점을 취득하고, 이를 통해 학위를 취득할 수 있는 제도입니다.</h3>
+            </article>
+
+            <!-- 장점 및 혜택 -->
+            <article class="benefits section">
+                <h3 class="benefits-tit">장점 및 혜택</h3>
+                <ul class="benefits-cont">
+                    <li>시간 절약</li>
+                    <li>비용 절감</li>
+                    <li>다양한 학위 취득 가능</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- 성공 사례 -->
+        <section id="reviews">
+            <article class="success-stories seciton">
+                <h3 class="success-tit">성공 사례</h3>
+                <p class="success-subtit">학점은행제를 통해 성공한 사례를 소개합니다.</p>
+            </article>
+        </section>
+
+        <!-- 자주 묻는 질문 -->
+        <section id="faq" class="faq">
+            <h2 class="faq-tit">자주 묻는 질문</h2>
+            <article>
+                <ul class="faq-list">
+                    <li>Q: 학점은행제는 어떻게 신청하나요?</li>
+                    <li>A: 상담 신청을 통해 자세한 안내를 받으실 수 있습니다.</li>
+                </ul>
+            </article>
+        </section>
+        <!-- 모달 구조 -->
+        <div class="modal-overlay">
+            <button type="button" class="modal-close">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal">
+                <div class="modal-content">
+                    <!-- Step 1 -->
+                    <div class="modal-step" data-step="1">
+                        <h2>원하는 니즈를 선택하세요</h2>
+                        <button class="need-btn" data-next="2">학위취득</button>
+                        <button class="need-btn" data-next="2">편입, 대학원, 대졸자전형</button>
+                        <button class="need-btn" data-next="2">자격증 취득</button>
+                        <button class="need-btn" data-next="2">국가기술자격증 응시자격</button>
+                        <button class="need-btn" data-next="2">기타사항</button>
+                    </div>
+    
+                    <!-- Step 2 -->
+                    <div class="modal-step" data-step="2" style="display: none;">
+                        <h2>다음 니즈를 선택하세요</h2>
+                        <button class="need-btn" data-next="3">학습자 맞춤 1:1 학습설계</button>
+                        <button class="need-btn" data-next="3">최단기간 준비</button>
+                        <button class="need-btn" data-next="3">저렴한 비용</button>
+                        <button class="need-btn" data-next="3">쉬운 난이도</button>
+                        <button class="need-btn" data-next="3">기타 사항</button>
+                    </div>
+    
+                    <!-- Step 3 -->
+                    <div class="modal-step" data-step="3" style="display: none;">
+                        <h2>선택한 니즈를 확인하세요</h2>
+                        <button class="need-btn" data-next="4">전화 상담</button>
+                        <button class="need-btn" data-next="4">카카오톡 상담</button>
+                        <button class="need-btn" data-next="4">문자 상담</button>
+                    </div>
+    
+                    <!-- Step 4 -->
+                    <div class="modal-step" data-step="4" style="display: none;">
+                        <h2 class="final-step-tit">상담 신청하기</h2>
+                        <form>
+                            <div class="form-group">
+                                <label for="name">이름</label>
+                                <input type="text" id="name" name="name" autocomplete="off" placeholder="(이름을 적어주세요.)" maxlength="20" onblur="validateUserName()" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">연락처:</label>
+                                <input type="tel" id="phone" name="phone" autocomplete="off" placeholder="(연락받을 번호를 남겨주세요.)" maxlength="20" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="course">희망 과정</label>
+                                <input type="text" id="course" name="course" autocomplete="off" placeholder="(ex. 학위취득, 자격증, 편입, 전공 등)" maxlength="20" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-time">연락 희망 시간</label>
+                                <input type="text" id="contact-time" name="contact-time" placeholder="(ex. 오후 3~4시에 가능합니다)">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">전달하고 싶은 내용</label>
+                                <textarea id="message" name="message" placeholder="(ex.직장인, 주부, 최단기간에 가능한가요? ○○대학교 편입/○○대학원 희망합니다.)"></textarea>
+                            </div>
+
+                            <div class="agree-check">
+                                <h4 class="join_title_txt">서비스 전체 약관</h4>
+                                <p class="allcheck">
+                                    <input type="checkbox" class="checkbox" id="allcheck" name="selectall">
+                                    <label for="allcheck">약관에 모두 동의합니다</label>
+                                </p>
+                                <p class="allcheck-txt">
+                                    서비스 약관, 개인정보 수집 및 이용에 모두 동의합니다.
+                                </p>
+                    
+                                <ul class="agree-checklist">
+                                    <li>
+                                        <input type="checkbox" class="checkbox only" name="chk1" id="chkItem1" value="1" required>
+                                        <label for="chkItem1">필수이용약관 동의</label>
+                                        <a href="javascript:void(0)" class="agree_btn" data-target="#terms1">[필수] 서비스 약관 동의</a>
+                                        <div class="agree-txt-modal" id="terms1" style="display: none;">
+                                            <div class="m_box">
+                                                <h3><strong>서비스 약관</strong></h3>
+                                                <p>서비스 약관 내용이 여기에 표시됩니다.</p>
+                                                <div class="btn_box">
+                                                    <button type="button" class="agree-modal-close c_btn">닫기</button>
+                                                    <button type="button" class="modal_agree">동의합니다.</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" class="checkbox only" name="chk2" id="chkItem2" value="1" required>
+                                        <label for="chkItem2">개인정보 필수항목에 대한 처리 및 이용 동의</label>
+                                        <a href="javascript:void(0)" class="agree_btn" data-target="#terms2">[필수] 개인정보 수집 및 이용 동의</a>
+                                        <div class="agree-txt-modal" id="terms2" style="display: none;">
+                                            <div class="m_box">
+                                                <h3><strong>개인정보 수집 및 이용</strong></h3>
+                                                <p>개인정보 수집 및 이용 내용이 여기에 표시됩니다.</p>
+                                                <div class="btn_box">
+                                                    <button type="button" class="agree-modal-close">닫기</button>
+                                                    <button type="button" class="modal_agree">동의합니다.</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <button type="submit" class="submit-btn">신청하기</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 사이드 -->
+     <aside class="q_mnu">
+        <div class="top_scroll-btn">
+            <a href="#top" title="상단으로이동" onclick="return false;" class="arctic_scroll">
+                <i class="fas fa-angle-up"></i>
+            </a>
+          </div>
+     </aside>
+    <!-- 푸터 -->
+    <footer>
+        <address>&copy; 2023 학점은행제. All rights reserved.</address>
+    </footer>
+
+    <script src="./js/cs_modal.js"></script>
+    <script src="./js/arctic_scroll.js"></script>
+    <script>
+        $(function () {
+            $(".arctic_scroll").arctic_scroll({
+                speed: 800
+            });
+        });
+    </script>
+</body>
+</html>
