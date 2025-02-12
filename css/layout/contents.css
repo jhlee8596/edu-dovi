@@ -11,7 +11,7 @@
     height: 100vh;
     background: #fff;
     overflow: hidden;
-    background: url('/images/banner/hero-visual.jpg') no-repeat center center/cover;
+    background: url('../../images/banner/hero-visual.jpg') no-repeat center center/cover;
     color: #fff;
     padding: 20px;
     box-sizing: border-box;
@@ -111,7 +111,7 @@
 
 .txt-wrap .txt04{
     top: 23.7%;
-    right: 17.5%;
+    right: 16.5%;
     flex-direction: column;
 }
 .txt-wrap .txt04 strong{}
