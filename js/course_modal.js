@@ -5,7 +5,7 @@ $(document).ready(function() {
             id: 1,
             title: "사회복지사 2급",
             header: {
-                image: "../../images/curriculum/modal-socialworker.png",
+                image: "./images/curriculum/modal-socialworker.png",
                 tags: ["#자격증", "#사회복지사", "#학점은행제"]
             },
             introduction: {
@@ -26,7 +26,7 @@ $(document).ready(function() {
             id: 2,
             title: "국가기술자격증 응시자격",
             header: {
-                image: "../../images/curriculum/modal-license.png",
+                image: "./images/curriculum/modal-license.png",
                 tags: ["#기사", "#산업기사", "#국가기술"]
             },
             introduction: {
@@ -47,7 +47,7 @@ $(document).ready(function() {
             id: 3,
             title: "학위취득",
             header: {
-                image: "../../images/curriculum/modal-graduate.png",
+                image: "./images/curriculum/modal-graduate.png",
                 tags: ["#학사학위", "#전문학사학위", "#학점은행제"]
             },
             introduction: {
@@ -110,7 +110,7 @@ $(document).ready(function() {
                                 <ul class="course-modal-benefits-list">
                                     <li>
                                         <div class="img-box">
-                                            <img src=".../../images/icon/icon-plan.png" alt="학습플랜 설계" class="benefits-icon">
+                                            <img src="./images/icon/icon-plan.png" alt="학습플랜 설계" class="benefits-icon">
                                         </div>
                                         <strong>학습자 니즈에 맞는 정확한 플랜</strong>
                                         <span>
@@ -120,7 +120,7 @@ $(document).ready(function() {
                                         </li>
                                         <li>
                                         <div class="img-box">
-                                            <img src=".../../images/icon/icon-data.png" alt="학습플랜 설계" class="benefits-icon">
+                                            <img src="./images/icon/icon-data.png" alt="학습플랜 설계" class="benefits-icon">
                                         </div>
                                         <strong>질 좋은 학습자료 제공</strong>
                                         <span>
@@ -130,7 +130,7 @@ $(document).ready(function() {
                                         </li>
                                         <li>
                                         <div class="img-box">
-                                            <img src=".../../images/icon/icon-administration.png" alt="학습플랜 설계" class="benefits-icon">
+                                            <img src="./images/icon/icon-administration.png" alt="학습플랜 설계" class="benefits-icon">
                                         </div>
                                         <strong>복잡한 행정절차의 도움</strong>
                                         <span>
@@ -140,7 +140,7 @@ $(document).ready(function() {
                                         </li>
                                         <li>
                                         <div class="img-box">
-                                            <img src=".../../images/icon/icon-feedback.png" alt="학습플랜 설계" class="benefits-icon">
+                                            <img src="./images/icon/icon-feedback.png" alt="학습플랜 설계" class="benefits-icon">
                                         </div>
                                         <strong>1:1 학습 도움</strong>
                                         <span>
@@ -150,7 +150,7 @@ $(document).ready(function() {
                                         </li>
                                         <li>
                                         <div class="img-box">
-                                            <img src=".../../images/icon/icon-collabo.png" alt="학습플랜 설계" class="benefits-icon">
+                                            <img src="./images/icon/icon-collabo.png" alt="학습플랜 설계" class="benefits-icon">
                                         </div>
                                         <strong>끝까지 책임지는 전담 멘토</strong>
                                         <span>
