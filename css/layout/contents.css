@@ -11,7 +11,7 @@
     height: 100vh;
     background: #fff;
     overflow: hidden;
-    background: url('/images/banner/hero-visual.png') no-repeat center center/cover;
+    background: url('../../images/banner/hero-visual.png') no-repeat center center/cover;
     color: #fff;
     padding: 20px;
     box-sizing: border-box;
@@ -210,7 +210,7 @@
 }
 .benefits .benefits-tit{}
 .benefits .visual-box{
-    background: url('/images/banner/benefits01.png') no-repeat center center/cover;
+    background: url('../../images/banner/benefits01.png') no-repeat center center/cover;
     position: relative;
     align-items: center;
     text-align: center;
