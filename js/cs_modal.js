@@ -10,17 +10,20 @@ $(document).ready(function() {
         $('body').css('overflow', 'hidden');
     });
 
-    // 모달 닫기 (모달 전체 닫기 버튼 및 오버레이 클릭 시)
-    $('.modal-overlay').on('click', function(event) {
-        if ($(event.target).is('.modal-overlay') || $(event.target).is('.modal-close')) {
-            $('.modal-overlay').fadeOut();
-            $('.modal').fadeOut();
-            $('.agree-txt-modal').fadeOut();
-
-            // 스크롤 다시 활성화
-            $('body').css('overflow', 'auto');
+    $(document).on('keydown', function(event) {
+        if (event.key === "Escape") { 
+            closeModal();
         }
     });
+
+    // 모달 닫기 공통 함수
+    function closeModal() {
+        $('.modal-overlay').fadeOut();
+        $('.modal').fadeOut();
+        $('.agree-txt-modal').fadeOut();
+        $('body').css('overflow', 'auto');
+        console.log("ESC 키 입력으로 모달이 닫혔습니다.");
+    }
 
     // 약관 모달 열기
     $('.agree_btn').click(function() {
@@ -74,4 +77,94 @@ $(document).ready(function() {
         // 스크롤 다시 활성화
         $('body').css('overflow', 'auto');
     });
+
+    window.selectStep1FromData = function(step1Option) {
+        const step1Buttons = $('.modal-step[data-step="1"] .need-btn');
+        step1Buttons.removeClass('selected');
+        
+        const matchedButton = step1Buttons.filter(function() {
+            return $(this).text().trim() === step1Option;
+        });
+        
+        if (matchedButton.length) {
+            matchedButton.addClass('selected'); // ✅ 선택된 버튼에 .selected 추가
+            console.log(`Step1 '${step1Option}' 자동 선택 및 .selected 클래스 추가 완료`);
+        } else {
+            console.warn(`Step1에 '${step1Option}'과 일치하는 버튼이 없습니다.`);
+        }
+    };
 });
+
+// ✅ 유효성 검사 메시지 추가 함수
+function showErrorMessage(element, message) {
+    // 기존 에러 메시지 제거
+    $(element).next('.error-message').remove();
+    // 새로운 에러 메시지 추가
+    $(element).after(`<p class="error-message text-red-500 text-sm mt-1">${message}</p>`);
+}
+
+// ✅ 입력 필드 공통 유효성 검사
+function validateInputField(element, message) {
+    if (!$(element).val().trim()) {
+        showErrorMessage(element, message);
+        return false;
+    }
+    return true;
+}
+
+// ✅ 약관 체크 검사
+function validateAgreement() {
+    if ($('.checkbox.only:checked').length !== $('.checkbox.only').length) {
+        alert('모든 필수 약관에 동의해 주세요.');
+        return false;
+    }
+    return true;
+}
+
+// ✅ 포커스 이동 시 유효성 검사 이벤트 추가
+$('#phone, #contact-time, #message').on('focus', function () {
+    // 이전 필드 검사 (이름 → 연락처, 연락처 → 희망시간 순서 등)
+    if ($(this).attr('id') === 'phone') {
+        validateInputField('#name', '이름을 입력해 주세요.');
+    }
+    if ($(this).attr('id') === 'contact-time') {
+        validateInputField('#phone', '연락처를 입력해 주세요.');
+    }
+    if ($(this).attr('id') === 'message') {
+        validateInputField('#contact-time', '연락 희망 시간을 입력해 주세요.');
+    }
+});
+
+// ✅ 포커스 아웃 시 유효성 검사
+$('input, textarea').on('blur', function() {
+    const fieldId = $(this).attr('id');
+    switch (fieldId) {
+        case 'name':
+            validateInputField(this, '이름을 입력해 주세요.');
+            break;
+        case 'phone':
+            validateInputField(this, '연락처를 입력해 주세요.');
+            break;
+        case 'contact-time':
+            validateInputField(this, '연락 희망 시간을 입력해 주세요.');
+            break;
+    }
+});
+
+// ✅ 상담 신청 시 전체 유효성 검사
+function validateFormFieldsOnSubmit() {
+    let isValid = true;
+
+    // 입력 필드 검사
+    isValid &= validateInputField('#name', '이름을 입력해 주세요.');
+    isValid &= validateInputField('#phone', '연락처를 입력해 주세요.');
+    isValid &= validateInputField('#contact-time', '연락 희망 시간을 입력해 주세요.');
+    isValid &= validateInputField('#message', '전달하고 싶은 내용을 입력해 주세요.');
+
+    // 약관 동의 검사
+    if (!validateAgreement()) {
+        isValid = false;
+    }
+
+    return !!isValid;
+}
