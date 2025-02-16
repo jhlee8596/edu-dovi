@@ -118,7 +118,7 @@ $(document).ready(function () {
 									<ul class="course-modal-benefits-list">
 										<li>
 											<div class="img-box">
-												<img src="./edu-dovi/images/icon/icon-plan.png" alt="학습플랜 설계" class="benefits-icon">
+												<img src="/edu-dovi/images/icon/icon-plan.png" alt="학습플랜 설계" class="benefits-icon">
 											</div>
 											<strong>학습자 니즈에 맞는 정확한 플랜</strong>
 											<span>
@@ -128,7 +128,7 @@ $(document).ready(function () {
 											</li>
 											<li>
 											<div class="img-box">
-												<img src="./edu-dovi/images/icon/icon-data.png" alt="학습플랜 설계" class="benefits-icon">
+												<img src="/edu-dovi/images/icon/icon-data.png" alt="학습플랜 설계" class="benefits-icon">
 											</div>
 											<strong>질 좋은 학습자료 제공</strong>
 											<span>
@@ -138,7 +138,7 @@ $(document).ready(function () {
 											</li>
 											<li>
 											<div class="img-box">
-												<img src="./edu-dovi/images/icon/icon-administration.png" alt="학습플랜 설계" class="benefits-icon">
+												<img src="/edu-dovi/images/icon/icon-administration.png" alt="학습플랜 설계" class="benefits-icon">
 											</div>
 											<strong>복잡한 행정절차의 도움</strong>
 											<span>
@@ -148,7 +148,7 @@ $(document).ready(function () {
 											</li>
 											<li>
 											<div class="img-box">
-												<img src="./edu-dovi/images/icon/icon-feedback.png" alt="학습플랜 설계" class="benefits-icon">
+												<img src="/edu-dovi/images/icon/icon-feedback.png" alt="학습플랜 설계" class="benefits-icon">
 											</div>
 											<strong>1:1 학습 도움</strong>
 											<span>
@@ -158,7 +158,7 @@ $(document).ready(function () {
 											</li>
 											<li>
 											<div class="img-box">
-												<img src="./edu-dovi/images/icon/icon-collabo.png" alt="학습플랜 설계" class="benefits-icon">
+												<img src="/edu-dovi/images/icon/icon-collabo.png" alt="학습플랜 설계" class="benefits-icon">
 											</div>
 											<strong>끝까지 책임지는 전담 멘토</strong>
 											<span>
