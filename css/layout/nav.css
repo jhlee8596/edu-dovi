@@ -4,7 +4,6 @@
     position: fixed;
     right: 30px;
     top: 50%;
-    -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     z-index: 101;
     width: 200px;
@@ -23,7 +22,6 @@
     right: 0px;
     line-height: 30px;
     background-color: rgba(0, 0, 0, 0.4);
-    -webkit-transition: 0.5s;
     transition: 0.5s;
     overflow: hidden;
 }

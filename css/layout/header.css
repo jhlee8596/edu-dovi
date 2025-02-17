@@ -1,3 +1,9 @@
+/*# sourceURL=./css/layout/header.css */
+/*@ sourceURL=./css/layout/header.css */
+/*# sourceURL=./css/layout/header.css */
+/*@ sourceURL=./css/layout/header.css */
+/*# sourceURL=./css/layout/header.css */
+/*@ sourceURL=./css/layout/header.css */
 @charset "utf-8";
 
 /* 헤더서식 */
@@ -28,20 +34,53 @@ header > h1 > a{
 
 header > .h-right-section{}
 header > .h-right-section > .consultation{}
-.consultation > .consultation-btn{
+/* .consultation > .consultation-btn{
     display: block;
     font-size: 16px;
     font-weight: 600;
     color: #fff;
-    background: #333;
+    background: #476eff;
     padding: 0 15px;
     box-sizing: border-box;
     line-height: 42px;
-    
     border-radius: 6px;
     text-align: center;
     cursor: pointer;
+} */
+.btn01 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    width: 165px;
+    height: 48px;
+    font-size: 16px;
+    font-weight: 600;
+    box-sizing: border-box;
+    line-height: 42px;
+    border-radius: 50px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #015ad1;
+    color: #fff;
+    /* animation: blinkbtn 1.7s infinite; */
 }
+
+/* @keyframes blinkbtn {
+    0%, 100% {
+        background-color: #6baeff;
+        color: #fff;
+    }
+
+    50% {
+        background: #015ad1;
+        color: #fff;
+    }
+} */
+.consultation-btn img{
+    width: 30px;
+}
+.consultation-btn span{}
 
 .on {
     color: #000 !important;
@@ -60,7 +99,7 @@ header > .h-right-section > .consultation{}
 
 .gnb {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .gnb > li > a {

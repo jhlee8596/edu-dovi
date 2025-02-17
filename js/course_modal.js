@@ -5,7 +5,7 @@ $(document).ready(function () {
       title: "사회복지사 2급",
 			step1Option: "자격증 취득",
       header: {
-        image: "/edu-dovi/images/curriculum/modal-socialworker.webp",
+        image: "/images/curriculum/modal-socialworker.webp",
         tags: ["#자격증", "#사회복지사", "#학점은행제"],
       },
       introduction: {
@@ -28,7 +28,7 @@ $(document).ready(function () {
       title: "국가기술자격증 응시자격",
 			step1Option: "국가기술자격증 응시자격",
       header: {
-        image: "/edu-dovi/images/curriculum/modal-license.webp",
+        image: "/images/curriculum/modal-license.webp",
         tags: ["#기사", "#산업기사", "#국가기술"],
       },
       introduction: {
@@ -52,7 +52,7 @@ $(document).ready(function () {
       title: "학위취득",
 			step1Option: "학위취득",
       header: {
-        image: "/edu-dovi/images/curriculum/modal-graduate.webp",
+        image: "/images/curriculum/modal-graduate.webp",
         tags: ["#학사학위", "#전문학사학위", "#학점은행제"],
       },
       introduction: {
@@ -118,7 +118,7 @@ $(document).ready(function () {
 									<ul class="course-modal-benefits-list">
 										<li>
 											<div class="img-box">
-												<img src="/edu-dovi/images/icon/icon-plan.png" alt="학습플랜 설계" class="benefits-icon">
+												<img src="./images/icon/icon-plan.png" alt="학습플랜 설계" class="benefits-icon">
 											</div>
 											<strong>학습자 니즈에 맞는 정확한 플랜</strong>
 											<span>
@@ -128,7 +128,7 @@ $(document).ready(function () {
 											</li>
 											<li>
 											<div class="img-box">
-												<img src="/edu-dovi/images/icon/icon-data.png" alt="학습플랜 설계" class="benefits-icon">
+												<img src="./images/icon/icon-data.png" alt="학습플랜 설계" class="benefits-icon">
 											</div>
 											<strong>질 좋은 학습자료 제공</strong>
 											<span>
@@ -138,7 +138,7 @@ $(document).ready(function () {
 											</li>
 											<li>
 											<div class="img-box">
-												<img src="/edu-dovi/images/icon/icon-administration.png" alt="학습플랜 설계" class="benefits-icon">
+												<img src="./images/icon/icon-administration.png" alt="학습플랜 설계" class="benefits-icon">
 											</div>
 											<strong>복잡한 행정절차의 도움</strong>
 											<span>
@@ -148,7 +148,7 @@ $(document).ready(function () {
 											</li>
 											<li>
 											<div class="img-box">
-												<img src="/edu-dovi/images/icon/icon-feedback.png" alt="학습플랜 설계" class="benefits-icon">
+												<img src="./images/icon/icon-feedback.png" alt="학습플랜 설계" class="benefits-icon">
 											</div>
 											<strong>1:1 학습 도움</strong>
 											<span>
@@ -158,7 +158,7 @@ $(document).ready(function () {
 											</li>
 											<li>
 											<div class="img-box">
-												<img src="/edu-dovi/images/icon/icon-collabo.png" alt="학습플랜 설계" class="benefits-icon">
+												<img src="./images/icon/icon-collabo.png" alt="학습플랜 설계" class="benefits-icon">
 											</div>
 											<strong>끝까지 책임지는 전담 멘토</strong>
 											<span>
@@ -170,7 +170,7 @@ $(document).ready(function () {
 									</div>
 								</div>
 								<div class="modal-cta">
-									<button class="cta-button">${courseContent.cta.buttonLabel}</button>
+									<button class="course-btn submit-btn w-full py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white text-lg font-semibold rounded-lg shadow-lg hover:from-blue-700 hover:to-blue-800 focus:ring-4 focus:ring-blue-300 focus:outline-none transform hover:-translate-y-0.5 transition-all duration-200">${courseContent.cta.buttonLabel}</button>
 									<p class="cta-info">${courseContent.cta.info}</p>
 								</div>
 							</div>
@@ -187,7 +187,7 @@ $(document).ready(function () {
     }
   });
 
-	$(document).on("click", ".cta-button", function () {
+	$(document).on("click", ".course-btn", function () {
     // 현재 courseId 가져오기
     const courseId = $(this).closest(".course-modal").data("id");
 

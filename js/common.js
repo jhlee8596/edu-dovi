@@ -53,5 +53,11 @@ $(document).ready(function(){
       });
       $('.q_mnu').fadeOut();
     }
+    if(sPos >= 2000){
+      $('.benefits-list').addClass('fade-in');
+    }
+    if(sPos >= 3100){
+      $('.curriculum-list-wrap').addClass('fade-in');
+    }
   });
 });

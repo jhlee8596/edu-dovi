@@ -1,3 +1,7 @@
+/*# sourceURL=./css/layout/modal.css */
+/*@ sourceURL=./css/layout/modal.css */
+/*# sourceURL=./css/layout/modal.css */
+/*@ sourceURL=./css/layout/modal.css */
 @charset "utf-8";
 
 .modal-overlay{
@@ -105,7 +109,7 @@
     color: #ffffff;
     font-size: 4em;
     font-weight: bold;
-    background: rgb(79 142 247 / 60%);
+    background: rgb(3 3 3 / 60%);
     padding: 5px 20px;
     border-radius: 12px;
 }
@@ -114,7 +118,7 @@
     display: inline-block;
     margin-right: 5px;
     padding: 4px 8px;
-    background: rgb(79 142 247 / 60%);
+    background: rgb(3 3 3 / 60%);
     color: #fff;
     border-radius: 5px;
     font-size: 0.85em;
@@ -280,9 +284,15 @@ margin: 0 auto;
     letter-spacing: -2px;
 }
 
-.modal-cta {display: flex;flex-direction: column;justify-content: center;align-items: center;padding-bottom: 80px;}
+.course-btn{
+    display: block;
+    width: 600px !important;
+    margin: 0 auto;
+}
 
-.cta-button.gradient-btn {
+.modal-cta {width: 100%;display: flex;flex-direction: column;justify-content: center;align-items: center;padding-bottom: 65px;}
+
+/* .cta-button.gradient-btn {
     background: linear-gradient(135deg, #FF6B6B, #FFA07A);
     color: #fff;
     padding: 15px 25px;
@@ -296,7 +306,7 @@ margin: 0 auto;
 
 .cta-button.gradient-btn:hover {
     background: linear-gradient(135deg, #FFA07A, #FF6B6B);
-}
+} */
 
 .cta-info {
     margin-top: 10px;

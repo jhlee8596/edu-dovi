@@ -1,3 +1,31 @@
+/*# sourceURL=./css/layout/contents.css */
+/*@ sourceURL=./css/layout/contents.css */
+/*# sourceURL=./css/layout/contents.css */
+/*@ sourceURL=./css/layout/contents.css */
+/*# sourceURL=./css/layout/contents.css */
+/*@ sourceURL=./css/layout/contents.css */
+/*# sourceURL=./css/layout/contents.css */
+/*@ sourceURL=./css/layout/contents.css */
+/*# sourceURL=./css/layout/contents.css */
+/*@ sourceURL=./css/layout/contents.css */
+/*# sourceURL=./css/layout/contents.css */
+/*@ sourceURL=./css/layout/contents.css */
+/*# sourceURL=./css/layout/contents.css */
+/*@ sourceURL=./css/layout/contents.css */
+/*# sourceURL=./css/layout/contents.css */
+/*@ sourceURL=./css/layout/contents.css */
+/*# sourceURL=./css/layout/contents.css */
+/*@ sourceURL=./css/layout/contents.css */
+/*# sourceURL=./css/layout/contents.css */
+/*@ sourceURL=./css/layout/contents.css */
+/*# sourceURL=./css/layout/contents.css */
+/*@ sourceURL=./css/layout/contents.css */
+/*# sourceURL=./css/layout/contents.css */
+/*@ sourceURL=./css/layout/contents.css */
+/*# sourceURL=./css/layout/contents.css */
+/*@ sourceURL=./css/layout/contents.css */
+/*# sourceURL=./css/layout/contents.css */
+/*@ sourceURL=./css/layout/contents.css */
 @charset "utf-8";
 
 
@@ -11,7 +39,7 @@
     height: 100vh;
     background: #fff;
     overflow: hidden;
-    background: url('/edu-dovi/images/banner/hero-visual.png') no-repeat center center/cover;
+    background: url("http://127.0.0.1:5500/images/banner/hero-visual.png") no-repeat center center/cover;
     color: #fff;
     padding: 20px;
     box-sizing: border-box;
@@ -146,13 +174,9 @@
 @keyframes mousepointer {
     0%,
     100% {
-        -webkit-transform: translate(0, 0);
-        -ms-transform: translate(0, 0);
         transform: translate(0, 0);
     }
     50% {
-        -webkit-transform: translate(10px, 10px);
-        -ms-transform: translate(10px, 10px);
         transform: translate(10px, 10px);
     }
 }
@@ -165,13 +189,9 @@
 @keyframes downbtn {
     0%,
     100% {
-        -webkit-transform: translateY(-3px);
-        -ms-transform: translateY(-3px);
         transform: translateY(-3px);
     }
     50% {
-        -webkit-transform: translateY(3px);
-        -ms-transform: translateY(3px);
         transform: translateY(3px);
     }
 }
@@ -201,16 +221,111 @@
 
 #introduction{
     /* max-width: 1080px; */
-    margin: 50px auto 50px;
+    margin: 0px auto 50px;
+}
+
+.hero-stats, .reason-title, .benefits-list, .curriculum-list-wrap{
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease-out;
+}
+
+.student-stats{
+  width: 100%;
+  min-width: 1080px;
+  height: 630px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  /* background: linear-gradient(90deg, #EFF3FA, #dbe9f7, #c3dfff); */
+  background: #EFF3FA;
+}
+.student-stats .reason-title{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    letter-spacing: -2px;
+}
+.reason-title .reason-title__subtitle{
+  font-size: 24px;
+  font-weight: 500;
+}
+.reason-title .reason-title__highlight{
+  font-size: 50px;
+  font-weight: bold;
+  font-family: "Stylish", serif;
+}
+.reason-title-txt1{
+    color: #515151;
+}
+.reason-title-txt2{color: #333;}
+.reason-title-txt3{
+    color: #4f8ef7;
+}
+.reason-title-txt4{
+  font-family: "Stylish", serif;
+  font-size: 30px !important;
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+.stat-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  gap: 3px;
+  padding: 30px 10px;
+  background-color: #4f8ef7;
+  border-radius: 50%;
+  font-weight: 500;
+  color: #ffffff;
+  box-shadow: 3px 5px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, background-color 0.3s;
+  box-sizing: border-box;
+}
+.stat-box:hover {
+  transform: translateY(-8px);
+}
+.stat-title{
+  font-size: 20px;
+  font-weight: bold;
+}
+.stat-count, .num{
+  text-align: center;
+  font-size: 44px;
+  font-weight: bold;
+}
+.num {
+  display: inline-block;
+  width: 25px;
+  height: 40px;
+  overflow: hidden;
+}
+.num-list {
+  display: inline-block;
+  line-height: 40px;
+  transition: margin 0.5s;
+  color: #fff;
 }
 
 .benefits{
     max-width: 1080px;
     margin: 0 auto;
+    position: relative;
 }
+
 .benefits .benefits-tit{}
 .benefits .visual-box{
-    background: url('/edu-dovi/images/banner/benefits01.png') no-repeat center center/cover;
+    background: url("http://127.0.0.1:5500/images/banner/benefits01.png") no-repeat center center/cover;
     position: relative;
     align-items: center;
     text-align: center;
@@ -225,27 +340,7 @@
     position: relative;
     padding: 93px 0px;
   }
-
-  .benefits-cont::after {
-    content: "+";
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    position: absolute;
-    top: -28px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: block;
-    background: #4F8EF7;
-    box-shadow: 0px 4px 9px rgba(24, 77, 181, 0.25);
-    font-weight: 400;
-    font-size: 34px;
-    line-height: 40px;
-    letter-spacing: -0.01em;
-    color: #FCFDFD;
-    text-align: center;
-    line-height: 48px;
-  }
+  
 
   .benefits-cont>h3,
   .benefits-cont>strong {
@@ -403,26 +498,6 @@
     padding: 93px 0px;
     position: relative;
 }
-.curriculum::after {
-    content: "+";
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    position: absolute;
-    top: -28px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: block;
-    background: #4F8EF7;
-    box-shadow: 0px 4px 9px rgba(24, 77, 181, 0.25);
-    font-weight: 400;
-    font-size: 34px;
-    line-height: 40px;
-    letter-spacing: -0.01em;
-    color: #FCFDFD;
-    text-align: center;
-    line-height: 48px;
-}
 .curriculum-tit{
     font-weight: 700;
     font-size: 38px;
@@ -439,7 +514,7 @@
     padding-bottom: 70px;
   }
   .curriculum-list:last-child {
-    padding-bottom: 145px;
+    padding-bottom: 0;
   }
   .curriculum-list > li {
     width: 31%;
@@ -517,6 +592,7 @@
     font-size: 20px;
     letter-spacing: -0.04em;
     color: #fff;
+    font-weight: bold;
   }
   .sample_btn {
     background: #4e5b68;
@@ -533,33 +609,87 @@
     background: #173dca;
   }
 
+  /* 성공 사례 섹션 */
+  .success-stories-wrap{
+    background: #EFF3FA;
+}
+  .success-stories{
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 93px 0px;
+    position: relative;
+  }
+  .success-tit {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .success-tit strong {
+    font-weight: 700;
+    font-size: 38px;
+    color: #4F8EF7;
+    line-height: 48px;
+    text-align: center;
+    letter-spacing: -0.03em;
+    display: block;
+    margin-bottom: 11px;
+  }
+
+  .success-tit span {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: -0.04em;
+    color: #555555;
+  }
+  .swiper {
+    width: 800px;
+    height: 350px;
+    margin: 50px auto;
+}
+
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.progress-bar-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background-color: #e0e0e0;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.progress-bar-container span {
+  display: block;
+  height: 100%;
+  background-color: #007bff;
+  transition: width linear;
+}
+
 
   /* 자주 묻는 질문 */
 .faq{
     /* max-width: fit-content; */
     padding: 93px 0px;
     position: relative;
-    background: #EFF3FA;
-}
-.faq::after {
-    content: "+";
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    position: absolute;
-    top: -28px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: block;
-    background: #4F8EF7;
-    box-shadow: 0px 4px 9px rgba(24, 77, 181, 0.25);
-    font-weight: 400;
-    font-size: 34px;
-    line-height: 40px;
-    letter-spacing: -0.01em;
-    color: #FCFDFD;
-    text-align: center;
-    line-height: 48px;
+    /* background: #EFF3FA; */
 }
 .faq-cont-wrap{
     max-width: 1080px;
@@ -615,7 +745,7 @@
   } */
 
   .faq-cont dl {
-    border-top: 2px solid #666666;
+    /* border-top: 2px solid #666666; */
   }
 
   .faq-cont dt {
