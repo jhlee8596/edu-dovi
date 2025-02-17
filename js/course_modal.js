@@ -5,7 +5,7 @@ $(document).ready(function () {
       title: "사회복지사 2급",
 			step1Option: "자격증 취득",
       header: {
-        image: "/images/curriculum/modal-socialworker.webp",
+        image: "./images/curriculum/modal-socialworker.webp",
         tags: ["#자격증", "#사회복지사", "#학점은행제"],
       },
       introduction: {
@@ -28,7 +28,7 @@ $(document).ready(function () {
       title: "국가기술자격증 응시자격",
 			step1Option: "국가기술자격증 응시자격",
       header: {
-        image: "/images/curriculum/modal-license.webp",
+        image: "./images/curriculum/modal-license.webp",
         tags: ["#기사", "#산업기사", "#국가기술"],
       },
       introduction: {
@@ -52,7 +52,7 @@ $(document).ready(function () {
       title: "학위취득",
 			step1Option: "학위취득",
       header: {
-        image: "/images/curriculum/modal-graduate.webp",
+        image: "./images/curriculum/modal-graduate.webp",
         tags: ["#학사학위", "#전문학사학위", "#학점은행제"],
       },
       introduction: {
