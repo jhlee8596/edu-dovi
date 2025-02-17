@@ -1,0 +1,182 @@
+<!-- ✅ 관리자 홈페이지 (Tailwind CSS 스타일 적용) -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>관리자 홈페이지 - 상담 내역</title>
+    <meta name="robots" content="noindex, nofollow"> 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        #consultationTableContainer {
+            min-height: 630px;
+            max-height: 630px;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-8">
+    <header>
+        <h1 class="text-3xl font-bold text-center mb-6 text-blue-500">상담 신청 내역</h1>
+    </header>
+
+    <main>
+        <div class="flex gap-4 mb-6">
+            <select id="searchType" class="border rounded p-4">
+                <option value="all">전체</option>
+                <option value="name">이름</option>
+                <option value="phone">전화번호</option>
+            </select>
+            <input id="searchInput" placeholder="검색어 입력" class="border rounded p-4" onkeypress="handleKeyPress(event)">
+            <button onclick="searchConsultations()" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">검색</button>
+            <button onclick="loadConsultations()" class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded">새로고침</button>
+        </div>
+    
+        <div id="consultationTableContainer" class="w-full bg-white border border-gray-200 rounded-lg shadow-lg">
+            <table class="w-full">
+                <thead class="bg-gray-200">
+                    <tr>
+                        <th class="p-4">ID</th>
+                        <th class="p-4">이름</th>
+                        <th class="p-4">연락처</th>
+                        <th class="p-4">희망 과정</th>
+                        <th class="p-4">중요도</th>
+                        <th class="p-4">상담 방법</th>
+                        <th class="p-4">연락 시간</th>
+                        <th class="p-4">전달 내용</th>
+                        <th class="p-4">신청 날짜</th>
+                    </tr>
+                </thead>
+                <tbody id="consultationTable" class="text-center"></tbody>
+            </table>
+        </div>
+    
+        <div id="pagination" class="flex justify-center mt-6 space-x-2"></div>
+    </main>
+    
+    <footer class="text-center text-gray-600 text-sm mt-8">
+        <p>&copy; 2025 Your Company. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const API_BASE_URL = 'http://localhost:3000/api';
+        let allConsultations = [];
+        let currentPage = parseInt(sessionStorage.getItem('currentPage')) || 1;
+        const itemsPerPage = 10;
+
+        function formatPhoneNumber(phone) {
+            return phone.replace(/(\d{3})(\d{4})(\d{4})/, '$1-$2-$3');
+        }
+
+        function searchConsultations() {
+            const type = document.getElementById('searchType').value;
+            const keyword = document.getElementById('searchInput').value.trim().toLowerCase();
+            const filtered = allConsultations.filter(item => {
+                if (type === 'name') return item.name.toLowerCase().includes(keyword);
+                if (type === 'phone') return item.phone.replace(/[^\d]/g, '').includes(keyword.replace(/[^\d]/g, ''));
+                return item.name.toLowerCase().includes(keyword) || item.phone.includes(keyword);
+            });
+            if (filtered.length === 0) {
+                alert('검색 결과가 없습니다.');
+            }
+            currentPage = 1;
+            displayConsultations(filtered);
+        }
+
+        function displayConsultations(list) {
+            const tbody = document.querySelector('#consultationTable');
+            tbody.innerHTML = '';
+            const start = (currentPage - 1) * itemsPerPage;
+            const end = start + itemsPerPage;
+            list.slice(start, end).forEach(item => {
+                tbody.innerHTML += `
+                    <tr class="border-b">
+                        <td class="p-4">${item.id}</td>
+                        <td class="p-4">${item.name}</td>
+                        <td class="p-4">${item.phone}</td>
+                        <td class="p-4">${item.step1}</td>
+                        <td class="p-4">${item.step2}</td>
+                        <td class="p-4">${item.step3}</td>
+                        <td class="p-4">${item.contactTime}</td>
+                        <td class="p-4">${item.message}</td>
+                        <td class="p-4">${new Date(item.createdAt).toLocaleString()}</td>
+                    </tr>`;
+            });
+            displayPagination(list.length);
+        }
+
+        let totalPages; // 전역 totalPages 선언
+
+        function displayPagination(totalItems) {
+            totalPages = Math.ceil(totalItems / itemsPerPage); // 전역 totalPages에 할당
+            const pagination = document.getElementById('pagination');
+            pagination.innerHTML = '';
+
+            const maxVisiblePages = 5;
+            let startPage = Math.max(currentPage - 2, 1);
+            let endPage = Math.min(startPage + maxVisiblePages - 1, totalPages);
+
+            if (endPage - startPage < maxVisiblePages - 1) {
+                startPage = Math.max(endPage - maxVisiblePages + 1, 1);
+            }
+
+            // 아이콘 버튼 (맨앞, 이전, 다음, 맨끝)
+            pagination.innerHTML += `
+                <button onclick="changePage(1)" class="p-2 rounded bg-gray-200 hover:bg-gray-300">
+                    <i class="fas fa-angle-double-left"></i>
+                </button>
+                <button onclick="changePage(currentPage > 1 ? currentPage - 1 : 1)" class="p-2 rounded bg-gray-200 hover:bg-gray-300">
+                    <i class="fas fa-angle-left"></i>
+                </button>
+            `;
+
+            // 숫자 페이지 버튼
+            for (let i = startPage; i <= endPage; i++) {
+                pagination.innerHTML += `
+                    <button onclick="changePage(${i})" class="px-3 py-1 rounded ${i === currentPage ? 'bg-blue-500 text-white' : 'bg-gray-200 hover:bg-gray-300'}">
+                        ${i}
+                    </button>
+                `;
+            }
+
+            // '> 버튼' totalPages 참조 오류 해결 및 다음 페이지 이동 로직 수정
+            pagination.innerHTML += `
+                <button onclick="changePage(currentPage < totalPages ? currentPage + 1 : totalPages)" class="p-2 rounded bg-gray-200 hover:bg-gray-300">
+                    <i class="fas fa-angle-right"></i>
+                </button>
+                <button onclick="changePage(totalPages)" class="p-2 rounded bg-gray-200 hover:bg-gray-300">
+                    <i class="fas fa-angle-double-right"></i>
+                </button>
+            `;
+        }
+
+        function changePage(page) {
+            currentPage = page;
+            sessionStorage.setItem('currentPage', currentPage);
+            displayConsultations(allConsultations);
+        }
+
+        async function loadConsultations() {
+            try {
+                const response = await fetch(`${API_BASE_URL}/consultations`);
+                if (!response.ok) throw new Error('응답 실패');
+                allConsultations = await response.json();
+                displayConsultations(allConsultations);
+            } catch (error) {
+                console.error('API 호출 오류:', error);
+                alert('데이터를 불러오지 못했습니다.');
+            }
+        }
+
+        function handleKeyPress(event) {
+            if (event.key === 'Enter') {
+                searchConsultations();
+            }
+        }
+
+        window.onload = () => {
+            loadConsultations();
+        };
+    </script>
+</body>
+</html>
