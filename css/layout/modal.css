@@ -1,8 +1,12 @@
+/*# sourceURL=./css/layout/modal.css */
+/*@ sourceURL=./css/layout/modal.css */
+/*# sourceURL=./css/layout/modal.css */
+/*@ sourceURL=./css/layout/modal.css */
 @charset "utf-8";
 
 .modal-overlay{
     background-color: rgba(0, 0, 0, 0.8) !important;
-    backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(0.625rem) !important;
     z-index: 99999 !important;
     display: none;
 }
@@ -11,21 +15,21 @@
 }
 .modal-content::-webkit-scrollbar, 
 .course-modal::-webkit-scrollbar {
-    width: 10px !important;
+    width: 0.625rem !important;
 }
 
 .modal-content::-webkit-scrollbar-thumb,  
 .course-modal::-webkit-scrollbar-thumb {
     background-color: rgb(55, 55, 55) !important;
-    border-radius: 10px !important;
+    border-radius: 0.625rem !important;
     background-clip: padding-box !important;
-    border: 2px solid transparent !important;
+    border: 0.125rem solid transparent !important;
 }
 
 .modal-content::-webkit-scrollbar-track, 
 .course-modal::-webkit-scrollbar-track {
-    border-radius: 10px !important;
-    box-shadow: inset 0px 0px 5px transparent !important;
+    border-radius: 0.625rem !important;
+    box-shadow: inset 0.000rem 0.000rem 0.312rem transparent !important;
 }
 
 .modal-close{
@@ -42,7 +46,7 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(0.625rem);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -57,33 +61,33 @@
 
 .course-modal {
     background: #fff;
-    max-width: 1080px;
+    max-width: 67.500rem;
     max-height: 80%;
     overflow-y: scroll;
-    border-radius: 10px;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    border-radius: 0.625rem;
+    box-shadow: 0 0 1.875rem rgba(0, 0, 0, 0.5);
     position: relative;
-    transform: translateY(-20px);
+    transform: translateY(-1.250rem);
 }
 
 
 
 .course-modal-section-wrap{
     background-color: #fff;
-    padding: 0 30px;
+    padding: 0 1.875rem;
 }
 .course-modal-header {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 1.250rem;
     position: relative;
 }
 
 .course-modal-image {
     width: 100%;
-    max-height: 470px;
+    max-height: 29.375rem;
     object-fit: cover;
 }
 
@@ -95,7 +99,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 0.625rem;
     transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
@@ -106,58 +110,58 @@
     font-size: 4em;
     font-weight: bold;
     background: rgb(3 3 3 / 60%);
-    padding: 5px 20px;
-    border-radius: 12px;
+    padding: 0.312rem 1.250rem;
+    border-radius: 0.750rem;
 }
 
 .course-modal-tags .tag {
     display: inline-block;
-    margin-right: 5px;
-    padding: 4px 8px;
+    margin-right: 0.312rem;
+    padding: 0.250rem 0.500rem;
     background: rgb(3 3 3 / 60%);
     color: #fff;
-    border-radius: 5px;
+    border-radius: 0.312rem;
     font-size: 0.85em;
     font-weight: bold;
 }
 
 .course-modal-section {
-    margin: 20px 0;
-    padding: 10px;
+    margin: 1.250rem 0;
+    padding: 0.625rem;
     background: #ffffff;
-    border-radius: 10px;
+    border-radius: 0.625rem;
 }
 
 .course-modal-section-title {
     width: 100%;
-    margin: 30px auto 0;
+    margin: 1.875rem auto 0;
     text-align: center;
     font-weight: 700 !important;
-    font-size: 38px;
-    line-height: 79px;
+    font-size: 2.375rem;
+    line-height: 4.938rem;
     letter-spacing: -0.04em;
     /* background-color: #fff; */
 }
 .course-modal-section-title > i{
     display: block;
       background: #000000;
-      width: 50px;
-      height: 50px;
-      margin: 0px auto 10px;
+      width: 3.125rem;
+      height: 3.125rem;
+      margin: 0.000rem auto 0.625rem;
       text-align: center;
       font-weight: 500;
-      font-size: 30px;
+      font-size: 1.875rem;
       letter-spacing: -0.04em;
       color: #FBFBFB;
       font-stretch: 100;
-      line-height: 48px;
+      line-height: 3.000rem;
       font-style: normal;
       border-radius: 50%;
 }
 .course-modal-section-title > strong{
     font-weight: 550;
-      font-size: 42px;
-      line-height: 49px;
+      font-size: 2.625rem;
+      line-height: 3.062rem;
       text-align: center;
       letter-spacing: -0.04em;
       color: #222222;
@@ -166,36 +170,36 @@
     
 text-align: center;
     
-font-size: 20px;
+font-size: 1.250rem;
     
 font-weight: bold;
     
 color: #333;
     
-max-width: 600px;
+max-width: 37.500rem;
     
 margin: 0 auto;
 }
 
 .course-modal-lecture-info{
-    width: 749px;
-    margin: 25px auto 0;
+    width: 46.812rem;
+    margin: 1.562rem auto 0;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 4px 0px;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    gap: 0.250rem 0.000rem;
+    box-shadow: 0 0 1.875rem rgba(0, 0, 0, 0.5);
 }
 
 .course-modal-lecture-info > dt {
     display: inline-block;
     background: linear-gradient(98.83deg, #525669 0.76%, #2D303D 97.62%);
-    width: 200px;
-    height: 80px;
-    line-height: 80px;
+    width: 12.500rem;
+    height: 5.000rem;
+    line-height: 5.000rem;
     text-align: center;
     font-weight: 600;
-    font-size: 24px;
+    font-size: 1.500rem;
     letter-spacing: -0.04em;
     color: #FFFFFF;
   }
@@ -206,13 +210,13 @@ margin: 0 auto;
 
   .course-modal-lecture-info > dd {
     display: inline-block;
-    width: 549px;
-    height: 80px;
-    line-height: 80px;
+    width: 34.312rem;
+    height: 5.000rem;
+    line-height: 5.000rem;
     background: #FFFFFF;
-    padding-left: 31px;
+    padding-left: 1.938rem;
     font-weight: 600;
-    font-size: 21px;
+    font-size: 1.312rem;
     letter-spacing: -0.04em;
     color: #444444;
     box-sizing: border-box;
@@ -233,8 +237,8 @@ margin: 0 auto;
 }
 
 .course-modal-section-list li {
-    margin: 5px 0;
-    padding-left: 15px;
+    margin: 0.312rem 0;
+    padding-left: 0.938rem;
     position: relative;
 }
 
@@ -245,59 +249,59 @@ margin: 0 auto;
     color: #4A90E2;
 }
 
-.course-modal-benefits-list{padding-top: 30px;display: flex;flex-direction: row;flex-wrap: wrap;justify-content: center;align-items: center;gap: 30px;}
+.course-modal-benefits-list{padding-top: 1.875rem;display: flex;flex-direction: row;flex-wrap: wrap;justify-content: center;align-items: center;gap: 1.875rem;}
 .course-modal-benefits-list > li{
     width: 32%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 0.625rem;
     background-color: #f6f6f6;
-    padding: 20px;
-    border-radius: 7px;
+    padding: 1.250rem;
+    border-radius: 0.438rem;
 }
 .img-box{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 1.250rem;
     border-radius: 50%;
     background: #fff;
 }
 .img-box > .benefits-icon{
-    height: 70px;
+    height: 4.375rem;
 }
 .course-modal-benefits-list strong{
     text-align: center;
-    font-size: 21px;
+    font-size: 1.312rem;
     font-weight: bold;
-    letter-spacing: -2px;
+    letter-spacing: -0.125rem;
 }
 .course-modal-benefits-list span{
     text-align: center;
-    font-size: 16px;
-    letter-spacing: -2px;
+    font-size: 1.000rem;
+    letter-spacing: -0.125rem;
 }
 
 .course-btn{
     display: block;
-    width: 600px !important;
+    width: 37.500rem !important;
     margin: 0 auto;
 }
 
-.modal-cta {width: 100%;display: flex;flex-direction: column;justify-content: center;align-items: center;padding-bottom: 65px;}
+.modal-cta {width: 100%;display: flex;flex-direction: column;justify-content: center;align-items: center;padding-bottom: 4.062rem;}
 
 /* .cta-button.gradient-btn {
     background: linear-gradient(135deg, #FF6B6B, #FFA07A);
     color: #fff;
-    padding: 15px 25px;
+    padding: 0.938rem 1.562rem;
     border: none;
-    border-radius: 10px;
+    border-radius: 0.625rem;
     cursor: pointer;
     font-size: 1.2em;
     transition: background 0.3s;
-    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.5);
+    box-shadow: 0 0.312rem 0.938rem rgba(255, 107, 107, 0.5);
 }
 
 .cta-button.gradient-btn:hover {
@@ -305,7 +309,7 @@ margin: 0 auto;
 } */
 
 .cta-info {
-    margin-top: 10px;
+    margin-top: 0.625rem;
     font-size: 0.9em;
     color: #666;
     display: none;
@@ -313,8 +317,8 @@ margin: 0 auto;
 
 .close-course-modal {
     position: absolute;
-    top: 40px;
-    right: 340px;
+    top: 2.500rem;
+    right: 21.250rem;
     background: none;
     border: none;
     font-size: 1.5rem;
@@ -322,9 +326,9 @@ margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 47px;
-    height: 47px;
-    border-radius: 9999px;
+    width: 2.938rem;
+    height: 2.938rem;
+    border-radius: 624.938rem;
     background-color: rgb(82, 82, 82);
     color: #fff;
 }

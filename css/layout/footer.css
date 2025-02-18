@@ -1,8 +1,18 @@
+/*# sourceURL=./css/font/footer_responsive.css */
+/*@ sourceURL=./css/font/footer_responsive.css */
 @charset "utf-8";
 
 footer{
     width: 100%;
-    min-width: 1080px;
-    height: 300px;
+    min-width: 67.500rem;
+    height: 18.750rem;
     background-color: #333;
+}
+
+@media screen and (max-width: 768px) {
+    footer{
+        width: 100%;
+        max-width: 100%;
+        min-width: 100%;
+    }
 }

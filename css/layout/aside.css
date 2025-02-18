@@ -3,26 +3,26 @@
 .q_mnu {
     position: fixed;
     left: 50%;
-    margin-left: 835px;
-    bottom: 30px;
+    margin-left: 52.188rem;
+    bottom: 1.875rem;
     z-index: 9999;
     display: none;
 }
 
 .top_scroll-btn {
-    width: 56px;
-    height: 56px;
+    width: 3.500rem;
+    height: 3.500rem;
     background: rgb(255 255 255 / 70%);
-    border: 1px solid #4F8EF7;
-    box-shadow: 0px 2.13333px 4.26667px rgba(188, 197, 229, 0.25);
-    border-radius: 8px;
-    margin: 18px auto;
+    border: 0.062rem solid #4F8EF7;
+    box-shadow: 0.000rem 0.133rem 0.267rem rgba(188, 197, 229, 0.25);
+    border-radius: 0.500rem;
+    margin: 1.125rem auto;
 }
 
 .top_scroll-btn > a {
     display: block;
-    font-size: 30px;
+    font-size: 1.875rem;
     text-align: center;
-    line-height: 54px;
+    line-height: 3.375rem;
     color: #2E68FF;
 }
