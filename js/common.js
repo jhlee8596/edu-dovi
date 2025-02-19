@@ -19,6 +19,7 @@ $(document).ready(function(){
   // 스크롤이벤트를 사용하여 일정영역이상으로 내려가면 위 서식을 적용한다.
   $(window).scroll(function(){
     let sPos = $(this).scrollTop();
+    let windowWidth = window.innerWidth;
     console.log(sPos);//스크롤값을 체크한다.
     
     if(sPos>=200){ //영상콘텐츠가 모두 올라가면
@@ -53,8 +54,16 @@ $(document).ready(function(){
       });
       $('.q_mnu').fadeOut();
     }
-    if(sPos >= 2000){
-      $('.benefits-list').addClass('fade-in');
+    if (windowWidth <= 768) {
+      // ✅ 모바일: 1320px일 때 실행
+      if (sPos >= 1320) {
+        $(".benefits-list").addClass("fade-in");
+      }
+    } else {
+      // ✅ PC: 2000px일 때 실행
+      if (sPos >= 2000) {
+        $(".benefits-list").addClass("fade-in");
+      }
     }
     if(sPos >= 3100){
       $('.curriculum-list-wrap').addClass('fade-in');

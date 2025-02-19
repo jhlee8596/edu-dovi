@@ -163,18 +163,13 @@
       color: #222222;
 }
 .section-content{
-    
-text-align: center;
-    
-font-size: 1.250rem;
-    
-font-weight: bold;
-    
-color: #333;
-    
-max-width: 37.500rem;
-    
-margin: 0 auto;
+    text-align: center;
+    font-size: 1.250rem;
+    font-weight: bold;
+    color: #333;
+    max-width: 37.500rem;
+    margin: 0 auto;
+    letter-spacing: -0.15rem;
 }
 
 .course-modal-lecture-info{
@@ -330,4 +325,72 @@ margin: 0 auto;
 }
 .close-course-modal:hover {
     background: linear-gradient(135deg, #4A90E2, #6C63FF);
+}
+
+@media screen and (max-width: 768px){
+    .modal{
+        width: 90%;
+        box-sizing: border-box;
+        margin: 0 auto !important;
+    }
+    .agree-checklist li{
+        display: block !important;
+    }
+    .agree_btn{
+        display: block !important;
+        margin-left: 1.8rem !important;
+    }
+
+    .course-modal{
+        width: 90%;
+    }
+    .close-course-modal{
+        top: 0rem;
+        right: 2rem;
+    }
+    .course-modal-title{
+        font-size: 1.5rem;
+    }
+    .course-modal-section-title > strong{
+        font-size: 1.6rem;
+    }
+    .section-content {
+        text-align: justify;
+        font-size: 1.175rem;
+    }
+    .course-modal-lecture-info{
+        width: 100%;
+        box-shadow: none;
+        border-left: 1px solid #ccc;
+        border-right: 1px solid #ccc;
+    }
+    .course-modal-lecture-info > dt{
+        width: 100%
+    }
+    .course-modal-lecture-info > dd{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 6rem;
+        line-height: 2rem;
+        text-align: center;
+        padding: 0 0.75rem;
+    }
+    .course-modal-lecture-info > dd:last-of-type{
+        border-bottom: 1px solid #ccc;
+    }
+    .course-modal-benefits-list{
+        display: block;
+    }
+    .course-modal-benefits-list > li{
+        width: 100%;
+    }
+    .course-btn{
+        width: 90% !important;
+    }
+    .close-course-modal{
+        top: 1rem;
+        right:  1rem;
+    }
 }

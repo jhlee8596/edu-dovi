@@ -18,7 +18,7 @@ const consultationSchedule = [
   { startHour: 9, count: 24 },
   { startHour: 12, count: 16 },
   { startHour: 15, count: 10 },
-  { startHour: 18, count: 6 },
+  { startHour: 18, count: 5 },
   { startHour: 21, count: 3 },
   { startHour: 23, count: 1 }
 ];
@@ -57,13 +57,27 @@ function getStudentCount() {
 
 $(window).on('scroll', function () {
   if (!hasTriggered) {
-    const scrollPos = $(window).scrollTop();
-    if (scrollPos > 400) {
-      hasTriggered = true;
-      $('.reason-title, .hero-stats').addClass('fade-in');
-      RollingNum('#student-count', getStudentCount());
-      $('#consultation-count').text(getConsultationCountByTime() + "/30명");
-      $('#satisfaction-score').text(getDailySatisfactionScore());
+    let scrollPos = $(window).scrollTop();
+    let windowWidth = window.innerWidth;
+
+    if (windowWidth <= 768) {
+      // 모바일
+      if (scrollPos >= 215) {
+        hasTriggered = true;
+        $('.reason-title, .hero-stats').addClass('fade-in');
+        RollingNum('#student-count', getStudentCount());
+        $('#consultation-count').text(getConsultationCountByTime() + "/30명");
+        $('#satisfaction-score').text(getDailySatisfactionScore());
+      }
+    } else {
+      // PC
+      if (scrollPos >= 400) {
+        hasTriggered = true;
+        $('.reason-title, .hero-stats').addClass('fade-in');
+        RollingNum('#student-count', getStudentCount());
+        $('#consultation-count').text(getConsultationCountByTime() + "/30명");
+        $('#satisfaction-score').text(getDailySatisfactionScore());
+      }
     }
   }
 });

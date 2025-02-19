@@ -5,7 +5,7 @@ $(document).ready(function () {
       title: "사회복지사 2급",
 			step1Option: "자격증 취득",
       header: {
-        image: "/edu-dovi/images/curriculum/modal-socialworker.webp",
+        image: "./images/curriculum/modal-socialworker.webp",
         tags: ["#자격증", "#사회복지사", "#학점은행제"],
       },
       introduction: {
@@ -28,7 +28,7 @@ $(document).ready(function () {
       title: "국가기술자격증 응시자격",
 			step1Option: "국가기술자격증 응시자격",
       header: {
-        image: "/edu-dovi/images/curriculum/modal-license.webp",
+        image: "./images/curriculum/modal-license.webp",
         tags: ["#기사", "#산업기사", "#국가기술"],
       },
       introduction: {
@@ -52,7 +52,7 @@ $(document).ready(function () {
       title: "학위취득",
 			step1Option: "학위취득",
       header: {
-        image: "/edu-dovi/images/curriculum/modal-graduate.webp",
+        image: "./images/curriculum/modal-graduate.webp",
         tags: ["#학사학위", "#전문학사학위", "#학점은행제"],
       },
       introduction: {
@@ -62,11 +62,82 @@ $(document).ready(function () {
       },
       points: {
         course: "학위취득",
-        qualifications: "학사학위 : 140학점, 전문학사학위 : 80학점",
+        qualifications: "학사학위 : 140학점 / 전문학사학위 : 80학점",
         proceed: "온라인 수업",
       },
       cta: {
         buttonLabel: "학위취득 상담받기",
+        info: "자세한 상담은 무료로 진행됩니다.",
+      },
+    },
+    {
+      id: 4,
+      title: "대학원 입학",
+			step1Option: "편입, 대학원, 대졸자전형",
+      header: {
+        image: "./images/curriculum/modal-graduateschool.webp",
+        tags: ["#일반대학원", "#교육대학원", "#전문대학원"],
+      },
+      introduction: {
+        title: "대학원을 진학하는 이유?",
+        contents:
+          "현재 우리 나라는 대학원 진학을 하는 비율이 굉장히 많이 늘어나고 있습니다. 공부 목적, 연구 목적 등 다양한 목적으로 진학을 하시겠지만, 대부분은 자신의 스펙과 학력 상승을 통해 원하는 곳으로의 취업을 위해 진학을 하고 있습니다.",
+      },
+      points: {
+        course: "4년제 학위 취득 과정",
+        qualifications: "(관련 전공의) 학사 학위",
+        proceed: "온라인 수업",
+      },
+      cta: {
+        buttonLabel: "대학원 입학 상담받기",
+        info: "자세한 상담은 무료로 진행됩니다.",
+      },
+    },
+    {
+      id: 5,
+      title: "편입",
+			step1Option: "지거국, 인서울, 성적세탁",
+      header: {
+        image: "./images/curriculum/modal-transfer.webp",
+        tags: ["#학사학위", "#전문학사학위", "#학점은행제"],
+      },
+      introduction: {
+        title: "학점은행제로 편입을 준비하는 이유?",
+        contents:
+          "편입학이란 대학교의 3학년으로 중도 입학을 하는 입시 제도입니다. 3학년으로 입학을 하는 것이기 때문에 당연히 지원자격이 따로 존재하죠. 또한, 대부분의 대학교는 전적대 성적을 기본적으로 보고 있기 때문에 성적 세탁을 목적으로도 학점은행제로 준비를 하고 있기도 합니다!",
+      },
+      points: {
+        course: "일반편입/학사편입 지원자격",
+        qualifications: "일반편입 : 80학점 / 학사편입 : 140학점",
+        proceed: "온라인 수업",
+      },
+      cta: {
+        buttonLabel: "편입 상담받기",
+        info: "자세한 상담은 무료로 진행됩니다.",
+      },
+    },
+    {
+      id: 6,
+      title: "대졸자전형",
+			step1Option: "편입, 대학원, 대졸자전형",
+      header: {
+        image: "./images/curriculum/modal-collegegraduation.webp",
+        tags: ["#간호학과", "#물리치료학과"],
+      },
+      introduction: {
+        title: "대졸자전형이란?",
+        contents:
+          "대학교 졸업자가 1학년으로 신입학하는 전형",
+				title2: "대졸자전형이 인기가 많은 이유?",
+				contents2: "간호학과, 물리치료학과로의 편입은 편입 시험 혹은 공인 영어를 따로 준비를 해야 합니다. 반면 대졸자전형은 대부분 전적대 성적(+면접)으로 모집을 하기 때문에 영어에 자신이 없다면 대졸자전형으로 준비를 하는 편이 유리합니다."
+      },
+      points: {
+        course: "전문학사 학위 취득 과정",
+        qualifications: "전문대 졸업자(예정자는 정시만)",
+        proceed: "온라인 수업",
+      },
+      cta: {
+        buttonLabel: "대졸자전형 상담받기",
         info: "자세한 상담은 무료로 진행됩니다.",
       },
     },
@@ -101,6 +172,16 @@ $(document).ready(function () {
 										<strong>${courseContent.introduction.title}</strong>
 									</h3>
 									<p class="section-content">${courseContent.introduction.contents}</p>
+									
+									${courseContent.introduction.title2 && courseContent.introduction.contents2
+										? `
+										<h3 class="course-modal-section-title">
+											<i>2</i>
+											<strong>${courseContent.introduction.title2}</strong>
+										</h3>
+										<p class="section-content">${courseContent.introduction.contents2}</p>`
+										: ""
+									}
 									<dl class="course-modal-lecture-info">
 										<dt>교육과정</dt>
 										<dd>${courseContent.points.course}</dd>
@@ -118,7 +199,7 @@ $(document).ready(function () {
 									<ul class="course-modal-benefits-list">
 										<li>
 											<div class="img-box">
-												<img src="/edu-dovi/images/icon/icon-plan.png" alt="학습플랜 설계" class="benefits-icon">
+												<img src="./images/icon/icon-plan.png" alt="학습플랜 설계" class="benefits-icon">
 											</div>
 											<strong>학습자 니즈에 맞는 정확한 플랜</strong>
 											<span>
@@ -128,7 +209,7 @@ $(document).ready(function () {
 											</li>
 											<li>
 											<div class="img-box">
-												<img src="/edu-dovi/images/icon/icon-data.png" alt="학습플랜 설계" class="benefits-icon">
+												<img src="./images/icon/icon-data.png" alt="학습플랜 설계" class="benefits-icon">
 											</div>
 											<strong>질 좋은 학습자료 제공</strong>
 											<span>
@@ -138,7 +219,7 @@ $(document).ready(function () {
 											</li>
 											<li>
 											<div class="img-box">
-												<img src="/edu-dovi/images/icon/icon-administration.png" alt="학습플랜 설계" class="benefits-icon">
+												<img src="./images/icon/icon-administration.png" alt="학습플랜 설계" class="benefits-icon">
 											</div>
 											<strong>복잡한 행정절차의 도움</strong>
 											<span>
@@ -148,7 +229,7 @@ $(document).ready(function () {
 											</li>
 											<li>
 											<div class="img-box">
-												<img src="/edu-dovi/images/icon/icon-feedback.png" alt="학습플랜 설계" class="benefits-icon">
+												<img src="./images/icon/icon-feedback.png" alt="학습플랜 설계" class="benefits-icon">
 											</div>
 											<strong>1:1 학습 도움</strong>
 											<span>
@@ -158,7 +239,7 @@ $(document).ready(function () {
 											</li>
 											<li>
 											<div class="img-box">
-												<img src="/edu-dovi/images/icon/icon-collabo.png" alt="학습플랜 설계" class="benefits-icon">
+												<img src="./images/icon/icon-collabo.png" alt="학습플랜 설계" class="benefits-icon">
 											</div>
 											<strong>끝까지 책임지는 전담 멘토</strong>
 											<span>
@@ -204,6 +285,7 @@ $(document).ready(function () {
 			$("body").css("overflow", "hidden");
 		} else {
 				console.warn(`Step1 옵션을 찾을 수 없습니다: ${step1Option}`);
+				
 		}
 
     // 모달 표시 및 Step2부터 열기
@@ -220,9 +302,6 @@ $(document).ready(function () {
 	$(document).on('keydown', function(event) {
 		if (event.key === "Escape") { 
 			$(".course-modal-overlay").fadeOut(300, function() {
-				$(this).remove();
-			});
-			$(".modal-overlay").fadeOut(300, function() {
 				$(this).remove();
 			});
 			$("body").css("overflow", "auto");

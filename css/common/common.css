@@ -1,6 +1,5 @@
 /*# sourceURL=./css/common/common.css */
 /*@ sourceURL=./css/common/common.css */
-/*# sourceURL=./css/common/common.css */
 /*@ sourceURL=./css/common/common.css */
 @charset "utf-8";
 
@@ -62,8 +61,7 @@ body::-webkit-scrollbar-track {
 .section{
     position: relative;
 }
-.section::after {
-    content: "+";
+.section > i.fa-plus {
     width: 3.438rem;
     height: 3.438rem;
     border-radius: 50%;
@@ -71,16 +69,16 @@ body::-webkit-scrollbar-track {
     top: -1.750rem;
     left: 50%;
     transform: translateX(-50%);
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: #4F8EF7;
     box-shadow: 0.000rem 0.250rem 0.562rem rgba(24, 77, 181, 0.25);
     font-weight: 400;
-    font-size: 2.125rem;
-    line-height: 2.500rem;
+    font-size: 1.5rem;
+    line-height: 1;
     letter-spacing: -0.01em;
     color: #FCFDFD;
-    text-align: center;
-    line-height: 3.000rem;
 }
 .section::before{
   content: "";

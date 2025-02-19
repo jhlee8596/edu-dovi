@@ -159,7 +159,6 @@ function validateFormFieldsOnSubmit() {
     isValid &= validateInputField('#name', '이름을 입력해 주세요.');
     isValid &= validateInputField('#phone', '연락처를 입력해 주세요.');
     isValid &= validateInputField('#contact-time', '연락 희망 시간을 입력해 주세요.');
-    isValid &= validateInputField('#message', '전달하고 싶은 내용을 입력해 주세요.');
 
     // 약관 동의 검사
     if (!validateAgreement()) {

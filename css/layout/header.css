@@ -76,6 +76,9 @@ header > .h-right-section > .consultation{}
 .consultation-btn img{
     width: 1.875rem;
 }
+.consultation-btn img.pointer{
+    width: 1.875rem;
+}
 .consultation-btn span{}
 
 .on {
